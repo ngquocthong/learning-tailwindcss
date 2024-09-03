@@ -38,17 +38,16 @@ const Hero = () => {
           className="object-contain relative"
         />
           <div className="flex sm:gap-4 gap-6 absolute -bottom-[5%] sm:left-[10%] max-sm:px-6">
-        {shoes.map((shoe, index) => (
-          <div key={shoe}>
-          <ShoeCard  imgURL={shoe} 
-            changeBigShoeImage={  (shoe)=> 
-              setBigShoeImg(shoe) 
-            } 
-            bigShoeImg={bigShoeImg}/>
-          
+            {shoes.map((shoe) => (
+              <div key={shoe.bigShoe}>
+                <ShoeCard
+                  imgURL={shoe}
+                  changeBigShoeImage={(shoe) => setBigShoeImg(shoe)}
+                  bigShoeImg={bigShoeImg}
+                />
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
       </div>
     
     </section>
